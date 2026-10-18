@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { DIcons } from "dicons";
- 
+
 
 import ThemeToogle from "@/components/ui/footer";
 
@@ -232,7 +232,7 @@ export function Footer() {
               href="https://www.instagram.com/aliimam.in/"
               target="_blank"
             >
-             Manish Suriyal  {""}
+              Manish Suriyal  {""}
             </Link>
           </span>
           -
