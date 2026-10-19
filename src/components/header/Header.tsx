@@ -1,8 +1,9 @@
 "use client";
 
-import { ChevronDown, Grid3X3, Menu, FileText } from "lucide-react";
+import { ChevronDown} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import MenuAnimation from "./components/MenuAnimation";
 
 const navigationItems = [
     { label: "Documents", href: "/documents" },
@@ -78,20 +79,8 @@ const Header = () => {
                             Get Started
                         </Link>
                     </div>
-                    <button
-                        type="button"
-                        className="text-slate-900 transition-colors hover:text-red-600 lg:hidden"
-                        aria-label="Open navigation menu"
-                    >
-                        <Menu className="size-6" aria-hidden="true" />
-                    </button>
-                    <button
-                        type="button"
-                        className="hidden text-slate-900 transition-colors hover:text-red-600 lg:block"
-                        aria-label="Open tools menu"
-                    >
-                        <Grid3X3 className="size-7" strokeWidth={2.5} aria-hidden="true" />
-                    </button>
+                    <MenuAnimation />
+                    
                 </div>
             </nav>
         </header>
