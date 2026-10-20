@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronDown} from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import MenuAnimation from "./components/MenuAnimation";
@@ -11,15 +11,15 @@ const navigationItems = [
     { label: "Pricing", href: "/pricing" },
 ];
 const navigationTools = [
-    { label: "Create DOC"  },
-    { label: "AI Tools"  },
-]
+    { label: "Create DOC" },
+    { label: "AI Tools" },
+];
 
 const Header = () => {
     return (
-        <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+        <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
             <nav
-                className="mx-auto flex h-16 max-w-350 items-center justify-between gap-6 px-6 lg:px-8"
+                className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-6 lg:px-8"
                 aria-label="Main navigation"
             >
                 {/* Logo */}
@@ -33,7 +33,8 @@ const Header = () => {
                         alt="Docsy_AI_ logo"
                         height={100}
                         width={140}
-                        />
+
+                    />
                 </Link>
 
                 {/* Desktop nav */}
@@ -42,21 +43,21 @@ const Header = () => {
                         <Link
                             key={item.label}
                             href={item.href}
-                            className="text-sm font-semibold uppercase text-slate-900 transition-colors hover:text-red-600"
+                            className="text-sm font-semibold uppercase text-slate-900 transition-colors hover:text-red-600 dark:text-slate-100 dark:hover:text-red-500"
                         >
                             {item.label}
                         </Link>
                     ))}
                     <Link
                         href="/documents/new"
-                        className="flex items-center gap-2 text-sm font-semibold uppercase text-slate-900 transition-colors hover:text-red-600"
+                        className="flex items-center gap-2 text-sm font-semibold uppercase text-slate-900 transition-colors hover:text-red-600 dark:text-slate-100 dark:hover:text-red-500"
                     >
                         Create
                         <ChevronDown className="size-4" aria-hidden="true" />
                     </Link>
                     <Link
                         href="/docs"
-                        className="flex items-center gap-2 text-sm font-semibold uppercase text-slate-900 transition-colors hover:text-red-600"
+                        className="flex items-center gap-2 text-sm font-semibold uppercase text-slate-900 transition-colors hover:text-red-600 dark:text-slate-100 dark:hover:text-red-500"
                     >
                         All Tools
                         <ChevronDown className="size-4" aria-hidden="true" />
@@ -68,19 +69,18 @@ const Header = () => {
                     <div className="hidden items-center gap-5 sm:flex">
                         <Link
                             href="/login"
-                            className="text-sm font-medium text-slate-900 transition-colors hover:text-red-600"
+                            className="text-sm font-medium text-slate-900 transition-colors hover:text-red-600 dark:text-slate-100 dark:hover:text-red-500"
                         >
                             Login
                         </Link>
                         <Link
                             href="/signup"
-                            className="rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-red-700"
+                            className="rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-red-700 dark:bg-red-600 dark:hover:bg-red-500"
                         >
                             Get Started
                         </Link>
                     </div>
                     <MenuAnimation />
-                    
                 </div>
             </nav>
         </header>
